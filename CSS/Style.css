@@ -1,0 +1,121 @@
+* { 
+    margin: 0px;
+    padding: 0px;
+   }
+   
+    body {
+        background: #F9E79F;
+        color: #fff;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+   
+    header{
+        background:#FF914D;
+        float: left;
+        width: 100%;
+        margin: 20px auto;
+   }
+   
+   header div{
+       float: left;
+   }
+   
+   header h1{
+       font-size: 70px;
+       text-align:center;
+       color: #000000;
+       margin: 120px;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-style: italic;
+   }
+   
+   nav{
+       background: #EDBB99;
+       overflow: hidden;
+       clear: both;
+   }
+   
+   nav ul{
+       list-style: none;
+   }
+   
+   nav ul li{
+       float: left;
+   }
+   
+   nav ul li a {
+    padding: 10px 40px;   
+    display: block;
+    text-decoration:none ;
+    color: #212121 ;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   
+   nav ul li a:hover{
+       background: #c1bdca;
+   }
+
+   #pastes {
+    width: 60%;
+       float: left;
+       background: #EDBB99;
+       margin: 30px auto;
+       color: #000000;
+       font-size: 30px;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       text-align: unset;
+   }
+
+   #pastes p{
+    margin: 10px;
+    margin-left: 20px;
+   }
+   
+   #conte{
+       width: 60%;
+       float: left;
+       background: #EDBB99;
+       margin: 30px auto;
+       color: #000000;
+       font-size: 30px;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       text-align: center;
+   }
+   
+   #conte h2{
+    font-size: 45px;
+    text-align: center;
+    color: #000000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+
+   #conte p {
+    margin: 10px;
+   }
+   
+   aside{
+       width: 38%;
+       float: right;
+       margin: 50px auto;
+   }
+   
+   footer{
+       background: #FF8A65;
+       clear: both;
+   }
+   
+   footer h2{
+       font-size: 50px;
+       margin: 20%;
+       padding: 10px;
+       font-style:normal;
+       text-align: center;
+       color:#000000;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+   }
