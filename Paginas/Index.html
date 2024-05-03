@@ -10,50 +10,98 @@
   
     <header>
         <div class="logo">
-            <img src="/Imagenes/Pastes.png"width="350" alt="paste">
+            <img src="/Imagenes/Logo/Pastes.png"width="350" alt="paste">
             </div>
         <h1>Bienvenidos a Pastes Darfab</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="Ubicacion.html">Ubicacion</a></li>
-            <li><a href="Acercade.html">Acerca de</a></li>
+            <li><a href="/Paginas/Ubicacion.html">Ubicacion</a></li>
+            <li><a href="/Paginas/catalogo.html">Catálogo</a></li>
+            <li><a href="/Paginas/Acercade.html">Acerca de</a></li>
             <li><a href="#" id="loginBtn">Login</a></li>
-            
         </ul>
     </nav>
 
-    <section id="pastes">
-        <article>
-            <h2>Sabor Dulces</h2>
-            <p> 
-                <ol>Piña</ol>
-                <ol>Manzana</ol>
-               <ol>Arroz con leche</ol> 
-               <ol>Crema de leche</ol>
-               <ol>Platano c/lechera</ol>
-            </p>
-        </article>
+    <!-- Sección 1: Carrusel de imágenes -->
 
-        <article>
-            <h2>Sabores Salados</h2>
-            <p>
-               <ol>Papa con carne</ol>
-               <ol>champiñones con queso</ol> 
-               <ol>Mole rojo</ol> 
-               <ol>Mole verde</ol>
-               <ol></ol>Salchicha
-               <ol>Hawaiiana</ol> 
-               <ol>Frijol con Chorizo</ol> 
-               <ol>Atun </ol>
-             </p>
-       </article>
-    </section>
+    <div id="carousel-container">
+        <div id="image-carousel">
+            <img class="carousel-image" src="/Imagenes/paste1.jpg" alt="Pastes Dulces">
+            <img class="carousel-image" src="/Imagenes/paste.jpg" alt="Pastes">
+            <img class="carousel-image" src="/Imagenes/paste3.jpg" alt="Pastes Salados">
+        </div>
+    </div>
 
-    <aside>
-        <img src="/Imagenes/comida.jpg" width="480" alt="comida">
-    </aside>
+    <!-- Sección 2: Imagen de fondo y promociones -->
+    <div class="promo-section">
+        <h2>Promociones del Mes</h2>
+        <!-- Aquí puedes agregar las fichas de promociones -->
+        <div class="promo-card">
+            <img src="./imagenes/3Lblanco.png" alt="Promoción 1">
+            <h3>3 leches blanco</h3>
+            <p>Descripción de la promoción 1.</p>
+        </div>
+        <div class="promo-card">
+            <img src="./imagenes/3Lcajeta.png" alt="Promoción 2">
+            <h3>3 leches cajeta</h3>
+            <p>Descripción de la promoción 2.</p>
+        </div>
+        <div class="promo-card">
+            <img src="./imagenes/3Lcerezanuez.png" alt="Promoción 3">
+            <h3>3 leches cereza nuez</h3>
+            <p>Descripción de la promoción 3.</p>
+        </div>
+        <div class="promo-card">
+            <img src="./imagenes/3Ldurazno.png" alt="Promoción 4">
+            <h3>3 leches durazno</h3>
+            <p>Descripción de la promoción 4.</p>
+        </div>
+        <div class="promo-card">
+            <img src="./imagenes/3Lrompope.png" alt="Promoción 5">
+            <h3>3 leches rompope</h3>
+            <p>Descripción de la promoción 5.</p>
+        </div>
+        
+        <!-- Repite para otras promociones -->
+    </div>
+
+    <!-- Sección 3: Carrusel de pasteles más vendidos -->
+    <h2 class="title-section">Los mas vendidos</h2>
+    <div class="best-sellers">
+        <!-- Puedes agregar elementos del carrusel con la estructura proporcionada -->
+        <div class="best-seller-item">
+            <img src="./imagenes/Chocolate.png" alt="Pastel 1">
+            <h3>Pastel de Chocolate</h3>
+            <p>Delicioso pastel de chocolate con relleno cremoso.</p>
+            <p>Precio: $299.00</p>
+        </div>
+        <div class="best-seller-item">
+            <img src="./imagenes/Fresa.png" alt="Pastel 1">
+            <h3>Pastel de Fresa</h3>
+            <p>Delicioso pastel de fresa con relleno cremoso.</p>
+            <p>Precio: $259.00</p>
+        </div>
+        <div class="best-seller-item">
+            <img src="./imagenes/Tiramisu.png" alt="Pastel 1">
+            <h3>Pastel de Tiramisu</h3>
+            <p>Delicioso pastel de Tiramisu.</p>
+            <p>Precio: $349.00</p>
+        </div>
+        <!-- Repite para otros pasteles -->
+    </div>
+
+    <!-- Sección 4: Formulario de suscripción -->
+    <div class="subscribe">
+        <h2>Suscríbete para recibir noticias y ofertas</h2>
+        <form>
+            <div class="subscribe-input">
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </div>
+        </form>
+        </div>
 
     <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -76,6 +124,7 @@
  <h2>Alimentamos tu cuerpo y alimentamos tu alma. Cocinamos pensando en tu bienestar.</h2>
  </Footer>
 
+ <script src="/JS/Index.js"></script>
  <script src="/JS/login.js"></script>
 </body>
 </html>

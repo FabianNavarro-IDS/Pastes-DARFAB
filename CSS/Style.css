@@ -4,13 +4,15 @@
    }
    
     body {
-        background: #F9E79F;
         color: #000000;
-        width: 90%;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 20px;
+        background-image: url("/Imagenes/bg.jpg");
+        background-attachment: fixed;
+        background-color: #F9E79F;
+        background-blend-mode: lighten;
     }
    
     header{
@@ -18,8 +20,10 @@
         float: left;
         width: 100%;
         margin: 20px auto;
+        padding: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
    }
-   
+
    header div{
        float: left;
    }
@@ -37,23 +41,27 @@
        background: #EDBB99;
        overflow: hidden;
        clear: both;
+       margin-bottom: 20px;
    }
    
-   nav ul{
-       list-style: none;
-   }
-   
-   nav ul li{
-       float: left;
-   }
+   nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 3vw;
+    }
    
    nav ul li a {
-    padding: 10px 40px;   
-    display: block;
-    text-decoration:none ;
-    color: #212121 ;
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 10px 40px;   
+        text-decoration:none ;
+        color: #212121 ;
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
    
    nav ul li a:hover{
@@ -61,19 +69,26 @@
    }
 
    #pastes {
-    width: 60%;
-       float: left;
-       background: #EDBB99;
-       margin: 30px auto;
-       color: #000000;
-       font-size: 30px;
-       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-       text-align: unset;
+        color: #000000;
+        font-size: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    #pastes p{
     margin: 10px;
     margin-left: 20px;
+   }
+
+   #pastes article, #Dulces, #Salados{
+    background: #EDBB99;
+    width: 50%;
+    float: left;
+    margin: 15px auto;
+   }
+
+   #cat{
+    font-size: 40px;
+    text-align: center;
    }
    
    #conte{
@@ -98,26 +113,16 @@
     margin: 10px;
    }
    
-   aside{
-       width: 38%;
-       float: right;
-       margin: 50px auto;
-   }
-   
    footer{
-       background: #FF8A65;
-       clear: both;
-   }
-   
-   footer h2{
-       font-size: 50px;
-       margin: 20%;
-       padding: 10px;
-       font-style:normal;
-       text-align: center;
-       color:#000000;
-       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+        background: #FF8A65;
+        clear: both;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color:#000000;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    /* Estilos para el cuadro emergente de login */
@@ -178,4 +183,273 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 70%; /* Ajusta según sea necesario */
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 30%; /* Ajusta según sea necesario */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.carousel img {
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Estilos para la sección de promociones */
+.promo-section {
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    font-size:xx-large;
+    margin-top: 20px;
+}
+
+.promo-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    display: inline-block;
+    font-size: medium;
+}
+
+/* Estilos para el carrusel de pasteles más vendidos */
+.best-sellers {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.best-seller-item {
+    text-align: center;
+    padding-left: 200px;
+    margin-right: 20px;
+}
+
+/* Estilos para el formulario de suscripción */
+.subscribe {
+    text-align: center;
+    padding: 40px;
+}
+
+#carousel-container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#image-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+/* Estilos para el formulario de suscripción */
+.subscribe-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.title-section{
+    font-size: xx-large;
+    text-align: center;
+}
+/* Estilos para el catálogo */
+.catalog-container {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.cake-card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+/* Estilos para el botón flotante */
+.floating-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.floating-btn:hover {
+    background-color: #555;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.contact-info,
+.contact-form {
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
+    box-sizing: border-box;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    margin-left: 8vw;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente en el formulario */
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Estilos para la sección de Nosotros */
+#nosotros {
+    text-align: center;
+}
+
+.section-header img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.section-content {
+    padding: 0;
+}
+
+/* Estilos para los apartados específicos */
+.history,
+.mission,
+.images-section,
+.text-video-text {
+    margin-top: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.mission {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.column {
+    width: 20%; /* Ajusta el ancho de las columnas según sea necesario */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
 }
