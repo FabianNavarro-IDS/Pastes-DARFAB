@@ -1,4 +1,3 @@
-import './FireBase.js'
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtén referencias a los elementos del DOM
