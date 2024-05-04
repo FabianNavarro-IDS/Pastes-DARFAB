@@ -57,9 +57,9 @@ mysqli_close($link);
 ?>
         </div>
 
-        <footer>
-            <h2>Creado por Fabian Navarro --- CETI --- 5°N ---</h2>
-        </footer>
+        <Footer>
+            <h2>Alimentamos tu cuerpo y alimentamos tu alma. Cocinamos pensando en tu bienestar.</h2>
+        </Footer>
 
     </body>
 </html>
