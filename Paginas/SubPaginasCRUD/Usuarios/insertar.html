@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>PHP y MySQL</title>
+        <link href="/Css/Style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/Imagenes/Logo/Pastes.png"width="350" alt="paste">
+                </div>
+            <h1>Bienvenidos a Pastes Darfa</h1>
+        </header>
+        
+         <nav>
+            <h2>Añadir Nuevo Cliente</h2>
+            <ul>
+                <li><a href="/PHP/CRUD/Clientes.php">Regresar</a></li> 
+            </ul>
+         </nav>
+
+        <div id="contenido">
+            <form action="/PHP/CRUD/Usuarios/insertar.php" method="get">
+                <p>Escriba los datos del nuevo registro:</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Clave:</td>
+                            <td>
+                                <input type="text" name="clave" size="40" maxlength="10" />
+                            </td>
+                            <td>Nombre:</td>
+                            <td>
+                                <input type="text" name="nombre" size="40" maxlength="40" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Direcci&oacute;n:</td>
+                            <td>
+                                <input type="text" name="direccion" size="60" maxlength="60" />
+                            </td>
+                            <td>Telefono</td>
+                            <td>
+                                <input type="text" name="telefono" size="15" maxlength="15" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <input type="submit" value="Añadir" size="10" maxlength="20" />
+                </p>
+            </form>
+        </div>
+
+        <Footer>
+            <h2>Alimentamos tu cuerpo y alimentamos tu alma. Cocinamos pensando en tu bienestar.</h2>
+        </Footer>
+    </body>
+
+</html>

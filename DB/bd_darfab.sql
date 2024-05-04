@@ -14,7 +14,7 @@ fecha datetime,
 estado varchar (20),
 numclientes int,
 formadepago varchar (20),
-foreign key (numclientes) references cliente (numclientes));
+foreign key (numclientes) references cliente (numclientes)ON DELETE CASCADE ON UPDATE CASCADE);
 
 create table catalogo (
 codigopastes int primary key auto_increment,
@@ -27,7 +27,7 @@ create table inventario (
 codigoinventario int primary key auto_increment,
 codigopastes int,
 stock int,
-foreign key (codigopastes) references catalogo (codigopastes));
+foreign key (codigopastes) references catalogo (codigopastes)ON DELETE CASCADE ON UPDATE CASCADE);
 
 create table domicilio (
 codigodomicilio int primary key auto_increment,
@@ -36,7 +36,7 @@ direccion varchar (50),
 codigo_postal varchar (15),
 ciudad varchar (15), 
 colonia varchar (15),
-foreign key (numclientes) references cliente (numclientes));
+foreign key (numclientes) references cliente (numclientes)ON DELETE CASCADE ON UPDATE CASCADE);
 
 create table detalle_pedido (
 codigodetalle int primary key auto_increment,
@@ -44,8 +44,8 @@ codigopedido int,
 codigopastes int,
 cantidad int,
 precio_unitario float,
-foreign key (codigopedido) references pedidos (codigopedido),
-foreign key (codigopastes) references catalogo (codigopastes));
+foreign key (codigopedido) references pedidos (codigopedido)ON DELETE CASCADE ON UPDATE CASCADE,
+foreign key (codigopastes) references catalogo (codigopastes)ON DELETE CASCADE ON UPDATE CASCADE);
 
 insert into cliente (numclientes, nombre, domicilio, telefono) values 
 (null,'liliana velez', 'avenida del rio','741258212');
