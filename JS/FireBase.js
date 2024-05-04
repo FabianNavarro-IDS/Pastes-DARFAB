@@ -8,5 +8,3 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-window.firebase = firebase;
