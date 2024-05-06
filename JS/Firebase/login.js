@@ -1,25 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtén referencias a los elementos del DOM
-    const loginBtn = document.getElementById("loginBtn");
-    const loginModal = document.getElementById("loginModal");
-    const closeBtn = document.getElementById("closeBtn");
-    const loginForm = document.getElementById("loginForm");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-
-    // Función para mostrar el cuadro de login
-    function openLoginModal() {
-        loginModal.style.display = "block";
-    }
-
-    // Función para cerrar el cuadro de login
-    function closeLoginModal() {
-        loginModal.style.display = "none";
-    }
-
-    // Eventos de clic para mostrar y cerrar el cuadro de login
-    loginBtn.addEventListener("click", openLoginModal);
-    closeBtn.addEventListener("click", closeLoginModal);
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"
+import { auth } from "./FireBase.js";
 
     // Evento de envío del formulario (autenticación por correo electrónico y contraseña)
     loginForm.addEventListener("submit", function (event) {
@@ -28,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = passwordInput.value;
 
         // Iniciar sesión con correo electrónico y contraseña
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Inicio de sesión exitoso
                 const user = userCredential.user;
@@ -44,4 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Aquí puedes mostrar un mensaje de error al usuario
             });
     });
-});
