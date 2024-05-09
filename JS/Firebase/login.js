@@ -1,26 +1,32 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"
 import { auth } from "./FireBase.js";
+import { mensaje } from './Mensaje.js'
 
-    // Evento de envío del formulario (autenticación por correo electrónico y contraseña)
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const email = emailInput.value;
-        const password = passwordInput.value;
+const loginForm = document.querySelector('#login-form')
 
-        // Iniciar sesión con correo electrónico y contraseña
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Inicio de sesión exitoso
-                const user = userCredential.user;
-                console.log("Inicio de sesión exitoso:", user);
-                // Cierra el cuadro de login después del proceso
-                closeLoginModal();
-            })
-            .catch((error) => {
-                // Error en el inicio de sesión
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.error("Error en inicio de sesión:", errorMessage);
-                // Aquí puedes mostrar un mensaje de error al usuario
-            });
-    });
+loginForm.addEventListener('submit', async e => {
+    e.preventDefault()
+
+    const email = loginForm['loginEmail'].value
+    const password = loginForm['loginPassword'].value
+
+    try {
+        const credentials = await signInWithEmailAndPassword(auth, email, password)
+        console.log((credentials))
+
+        const loginModal = document.querySelector('#loginModal')
+        const modal = bootstrap.Modal.getInstance(loginModal)
+        modal.hide()
+
+    mensaje ("Bienvenido " + credentials.user.email)
+    
+    } catch (error) {
+        if (error.code === 'auth/user-not-found'){
+            mensaje("Correo Incorrecto", "error")
+        } else if (error.code === 'auth/wrong-password'){
+            mensaje("Contraseña Incorrecta", "error")
+        } else if (error.code){
+            mensaje("Algo va mal", "error")
+        }
+    }
+})

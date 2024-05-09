@@ -27,7 +27,8 @@ registerform.addEventListener('submit', async (e) => {
         mensaje("Correo invalido", "error")
     } else if (error.code === 'auth/weak-password'){
         mensaje("Contraseña invalida", "error")
-    } else if (error.code)
+    } else if (error.code){
         mensaje("Algo va mal", "error")
+    }
    }
 })
